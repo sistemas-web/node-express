@@ -1,0 +1,16 @@
+{
+  "name": "node-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Teste não construídos\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "DSW 2015.2 IFRN-CNAT-DIATINF",
+  "license": "ISC"
+}
