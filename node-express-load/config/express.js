@@ -1,12 +1,18 @@
 var express = require('express');
-var tabuleiro = require('../app/routes/tabuleiro');
+var load = require('express-load');
+// var tabuleiro = require('../app/routes/tabuleiro');
 
 module.exports = function() {
     var app = express();
     app.port = 3000;
 
     // app.use(express.static, './public');
-    tabuleiro(app);
+    load('models', {cwd: 'app'})
+        .then('controllers')
+        .then('routes')
+        .into(app);
+
+    // tabuleiro(app);
 
     return app;
 }
